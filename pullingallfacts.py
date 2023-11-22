@@ -22,6 +22,7 @@ for line in processed.sentences:
             sent = TextBlob(sent)
             
             # major point in the decision tree, arbitrarily selected 0.8 as the threshold for subjectivity. [0 is objecive: 1 is subjective]
+            ## 11/22/2023: Threshold should've been lower, however I'd rather err to parse and remove manually unless trust in the accuracy of TextBloob is 100%
             if sent.subjectivity <=0.8:
                 nlpfacts.append(sent)
 
